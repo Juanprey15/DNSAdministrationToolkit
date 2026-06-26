@@ -7,13 +7,16 @@
     ===========================================================================
 #>
 
+Import-Module "$PSScriptRoot\PathService.psm1" -Force
+Import-Module "$PSScriptRoot\WPF.psm1" -Force
+
+Write-Host "Application PSScriptRoot = $PSScriptRoot" -ForegroundColor Yellow
 
 function Get-DATVersion {
 
-    return "0.1.0"
+    "0.1.0-alpha"
 
 }
-
 
 function Initialize-DAT {
 
@@ -22,20 +25,19 @@ function Initialize-DAT {
 
 }
 
-
 function Start-DAT {
 
-    Write-Host ""
-    Write-Host "Starting DAT..." -ForegroundColor Green
+    . (Get-DATMainWindowScript)
+
+    $Window = New-DATMainWindow
+
+    Write-Host $Window.GetType().FullName -ForegroundColor Yellow
+
+    Show-DATWindow -Window $Window
 
 }
 
-
-function Stop-DAT {
-
-    Write-Host ""
-    Write-Host "Stopping DAT..." -ForegroundColor Yellow
-
-}
-
-Export-ModuleMember -Function *
+Export-ModuleMember `
+    -Function Get-DATVersion,
+              Initialize-DAT,
+              Start-DAT

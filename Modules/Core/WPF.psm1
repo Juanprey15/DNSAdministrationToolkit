@@ -12,46 +12,58 @@ Add-Type -AssemblyName PresentationFramework
 Add-Type -AssemblyName PresentationCore
 Add-Type -AssemblyName WindowsBase
 
-
 function Import-DATXaml {
 
     param(
-
         [Parameter(Mandatory)]
-
         [string]$Path
-
     )
 
-    if (-not (Test-Path $Path)) {
-
+    if (!(Test-Path $Path)) {
         throw "XAML file not found: $Path"
-
     }
 
     $Xaml = Get-Content $Path -Raw
 
     $Reader = New-Object System.Xml.XmlNodeReader ([xml]$Xaml)
 
-    return [Windows.Markup.XamlReader]::Load($Reader)
+    [Windows.Markup.XamlReader]::Load($Reader)
 
 }
-
-
 
 function Show-DATWindow {
 
     param(
-
         [Parameter(Mandatory)]
-
         $Window
-
     )
 
     $null = $Window.ShowDialog()
 
 }
 
+function Get-DATControl {
+
+    param(
+
+        [Parameter(Mandatory)]
+        $Window,
+
+        [Parameter(Mandatory)]
+        [string]$Name
+
+    )
+
+    $Control = $Window.FindName($Name)
+
+    if (!$Control) {
+
+        throw "Control '$Name' not found."
+
+    }
+
+    return $Control
+
+}
 
 Export-ModuleMember -Function *
