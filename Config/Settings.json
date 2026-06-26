@@ -1,0 +1,12 @@
+{
+    "ApplicationName": "DNS Administration Toolkit",
+    "Version": "0.1.0",
+    "Theme": "Dark",
+    "WindowWidth":1400,
+    "WindowHeight":900,
+    "DefaultDnsServer": "",
+    "ExportFolder": ".\\Output",
+    "LogFolder": ".\\Logs",
+    "RecentSearches": 20,
+    "AutoSaveLogs": true
+}
