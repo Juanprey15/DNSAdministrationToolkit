@@ -1,12 +1,11 @@
-# DNS Administration Toolkit Roadmap
+# v0.2.0-alpha
 
-## Version 0.1
+## Sprint 1 - UI Framework
 
-- [x] Project bootstrap
-- [x] WPF shell
-- [ ] Theme manager
-- [ ] Search UI
-- [ ] Search engine
-- [ ] Zone Explorer
-- [ ] Reports
-- [ ] Settings
+- [x] ResourceManager framework
+- [x] Dark theme
+- [ ] Button styles
+- [ ] TextBox styles
+- [ ] DataGrid styles
+- [ ] Automatic resource loading
+- [ ] Remove hardcoded UI colors

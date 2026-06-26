@@ -14,7 +14,7 @@ Write-Host "Application PSScriptRoot = $PSScriptRoot" -ForegroundColor Yellow
 
 function Get-DATVersion {
 
-    "0.1.0-alpha"
+    "0.2.0-alpha"
 
 }
 

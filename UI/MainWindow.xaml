@@ -98,6 +98,8 @@
 
         <!-- STATUS BAR -->
 
+        <!-- STATUS BAR -->
+
         <StatusBar
             Grid.Row="2"
             Grid.ColumnSpan="2"
@@ -107,7 +109,8 @@
 
                 <TextBlock
                     x:Name="StatusText"
-                    Text="Ready"/>
+                    Text="Ready"
+                    Foreground="{DynamicResource PrimaryTextBrush}"/>
 
             </StatusBarItem>
 
@@ -115,7 +118,9 @@
 
             <StatusBarItem HorizontalAlignment="Right">
 
-                <TextBlock Text="Developed by Juan Pablo Rey"/>
+                <TextBlock
+                    Text="Developed by Juan Pablo Rey"
+                    Foreground="{DynamicResource PrimaryTextBrush}"/>
 
             </StatusBarItem>
 
