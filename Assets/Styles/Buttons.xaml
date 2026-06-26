@@ -1,0 +1,18 @@
+﻿<Style x:Key="PrimaryButton"
+       TargetType="Button">
+
+    <Setter Property="Background"
+            Value="{DynamicResource AccentBrush}"/>
+
+    <Setter Property="Foreground"
+            Value="White"/>
+
+    <Setter Property="Height"
+            Value="36"/>
+
+    <Setter Property="Padding"
+            Value="15,5"/>
+
+    <Setter Property="Margin"
+            Value="5"/>
+</Style>

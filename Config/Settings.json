@@ -1,0 +1,22 @@
+{
+    "Application": {
+        "Name": "DNS Administration Toolkit",
+        "Version": "0.1.0-alpha",
+        "Author": "Juan Pablo Rey",
+        "Theme": "Dark"
+    },
+
+    "Window": {
+        "Width": 1400,
+        "Height": 900
+    },
+
+    "Logging": {
+        "Enabled": true,
+        "Level": "Information"
+    },
+
+    "DNS": {
+        "DefaultServer": ""
+    }
+}
